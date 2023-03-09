@@ -1,3 +1,4 @@
+import { describe, it, expect } from 'vitest'
 import RPSEvidence from '../src/RpsEvidence'
 
 const createRPSEvidence = (params) => () => new RPSEvidence(params)

@@ -1,3 +1,4 @@
+import { describe, it, expect, vi } from 'vitest'
 import TokenProvider from '../src/TokenProvider'
 
 const identityServerHostName = 'identity'
@@ -26,7 +27,7 @@ describe(`Token request throw error`, () => {
     const tokenProvider = new TokenProvider({identityServerHostName})
 
     const errorMessage = 'Invalid secrets'
-    tokenProvider.generateToken = await jest.fn().mockRejectedValue(errorMessage)
+    tokenProvider.generateToken = await vi.fn().mockRejectedValue(errorMessage)
 
     try {
       await tokenProvider.getToken({clientId: 'clientId', clientSecret: 'clientSecret'})

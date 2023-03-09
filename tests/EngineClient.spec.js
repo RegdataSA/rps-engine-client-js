@@ -1,3 +1,4 @@
+import { describe, it, expect, vi, beforeEach } from 'vitest'
 import {
   createEngine,
   invalidRequestsStructures,
@@ -37,7 +38,7 @@ describe(`transform()`, () => {
   describe(`Transform received an error during getting token`, () => {
     const error = {status: 401, message: 'Unauthorized'}
     beforeEach(async () => {
-      tokenProvider.generateToken = await jest.fn().mockRejectedValue(error)
+      tokenProvider.generateToken = await vi.fn().mockRejectedValue(error)
     })
 
     const transformTest = async (errorHandler = () => {}) => {
@@ -64,25 +65,25 @@ describe(`transform()`, () => {
   describe(`Transform responses`, () => {
     beforeEach(async () => {
       const tokenInfo = {token: 'token', tokenType: 'tokenType'}
-      tokenProvider.generateToken = await jest.fn().mockResolvedValue(tokenInfo)
+      tokenProvider.generateToken = await vi.fn().mockResolvedValue(tokenInfo)
     })
 
     it(`return correct processed response`, async () => {
-      engine.transformPostRequest = await jest.fn().mockResolvedValue(validOriginalResponse)
+      engine.transformPostRequest = await vi.fn().mockResolvedValue(validOriginalResponse)
 
       const response = await engine.transform(validRequestData)
       expect(response).toEqual(validProcessedResponse)
     })
 
     it(`return correct original response`, async () => {
-      engine.transformPostRequest = await jest.fn().mockResolvedValue(validOriginalResponse)
+      engine.transformPostRequest = await vi.fn().mockResolvedValue(validOriginalResponse)
 
       const response = await engine.transform(validRequestData, {returnOriginal: true})
       expect(response).toEqual(validOriginalResponse)
     })
 
     it(`return empty value(not throw)`, async () => {
-      engine.transformPostRequest = await jest.fn().mockResolvedValue('')
+      engine.transformPostRequest = await vi.fn().mockResolvedValue('')
 
       await expect(engine.transform(validRequestData)).resolves
     })

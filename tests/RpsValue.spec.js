@@ -1,3 +1,4 @@
+import { describe, it, expect } from 'vitest'
 import RPSValue from '../src/RpsValue'
 
 const createRPSValue = (params) => () => new RPSValue(params)

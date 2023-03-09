@@ -1,7 +1,7 @@
 import path from 'path'
 import { URL, fileURLToPath } from 'node:url'
 
-import { defineConfig } from 'vite'
+import { defineConfig } from 'vitest/config'
 import { nodePolyfills } from 'vite-plugin-node-polyfills'
 
 const resolve = (str: string) => path.resolve(fileURLToPath(new URL('./', import.meta.url)), str)
@@ -50,4 +50,10 @@ export default defineConfig({
       },
     },
   },
+
+  test: {
+    coverage: {
+      enabled: true,
+    }
+  }
 })

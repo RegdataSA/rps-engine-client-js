@@ -1,3 +1,4 @@
+import { describe, it, expect } from 'vitest'
 import RPSContext from '../src/RpsContext'
 
 const createRPSContext = (params) => () => new RPSContext(params)
