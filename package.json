@@ -7,6 +7,7 @@
     "build": "vite build",
     "build-legacy": "rollup -c",
     "prepare": "husky install",
+    "release-patch": "standard-version --release-as patch",
     "release": "standard-version",
     "test": "jest",
     "lint": "eslint .",
