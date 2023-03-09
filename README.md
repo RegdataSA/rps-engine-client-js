@@ -71,3 +71,7 @@ const requestData = new RequestBuilder()
 const response = await engineClient.transform(requestData)
 console.log(response)
 ```
+
+---
+
+Compatible with Vite from version 3.11.0
