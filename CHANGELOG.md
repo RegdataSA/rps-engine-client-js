@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.11.3](https://github.com/RegdataSA/rps-engine-client-js/compare/v3.11.2...v3.11.3) (2023-04-17)
+
+
+### Features
+
+* remove 'api' prefix for transform endpoint ([a71f8a9](https://github.com/RegdataSA/rps-engine-client-js/commit/a71f8a95663dfede24f0ed4274e853404d0552d0))
+
 ### [3.11.2](https://github.com/RegdataSA/rps-engine-client-js/compare/v3.11.1...v3.11.2) (2023-03-09)
 
 ### 3.11.1 (2023-03-09)
