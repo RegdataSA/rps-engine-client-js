@@ -1,6 +1,6 @@
 {
   "name": "rps-engine-client-js",
-  "version": "3.10.6",
+  "version": "3.10.8",
   "description": "RPSEngine client lib",
   "repository": "RegdataSA/rps-engine-client-js",
   "main": "./lib/index.js",
