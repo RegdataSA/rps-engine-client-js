@@ -45,7 +45,7 @@ class EngineClient {
   async transformPostRequest (requestData, tokenInfo) {
     const headers = EngineClient.#genHeaders(tokenInfo)
 
-    return this.#httpClient.post('transform', requestData, {headers})
+    return this.#httpClient.post('api/transform', requestData, {headers})
   }
 
   /**
