@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.11.4](https://github.com/RegdataSA/rps-engine-client-js/compare/v3.11.3...v3.11.4) (2023-04-21)
+
 ### [3.11.3](https://github.com/RegdataSA/rps-engine-client-js/compare/v3.11.2...v3.11.3) (2023-04-17)
 
 
