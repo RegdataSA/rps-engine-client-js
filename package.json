@@ -2,19 +2,20 @@
   "name": "rps-engine-client-js",
   "version": "4.0.0",
   "description": "RPSEngine client lib",
+  "keywords": [
+    "REGDATA",
+    "RPS Engine",
+    "transformation",
+    "encryption",
+    "decryption"
+  ],
+  "license": "Apache-2.0",
   "repository": "RegdataSA/rps-engine-client-js",
-  "scripts": {
-    "build": "vite build",
-    "build-legacy": "rollup -c",
-    "prepare": "husky install",
-    "release-patch": "standard-version --release-as patch",
-    "release": "standard-version",
-    "test": "vitest",
-    "lint": "eslint .",
-    "lint:fix": "eslint --fix --ext .js"
-  },
-  "module": "./dist/index.mjs",
-  "main": "./dist/index.cjs",
+  "author": "RegdataSA Dmytro Novikov",
+  "files": [
+    "lib",
+    "package.json"
+  ],
   "exports": {
     ".": {
       "import": "./lib/index.mjs",
@@ -27,44 +28,37 @@
     "./lib/*": "./lib/*",
     "./package.json": "./package.json"
   },
-  "files": [
-    "lib",
-    "package.json"
-  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "scripts": {
+    "build": "vite build",
+    "prepare": "husky install",
+    "release-patch": "standard-version --release-as patch",
+    "release": "standard-version",
+    "test": "vitest",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix --ext .js"
+  },
   "publishConfig": {
     "access": "public"
-  },
-  "author": "RegdataSA Dmytro Novikov",
-  "license": "Apache-2.0",
-  "keywords": [
-    "REGDATA",
-    "RPS Engine",
-    "transformation",
-    "encryption",
-    "decryption"
-  ],
-  "dependencies": {
-    "axios": "^0.23.0",
-    "jsonschema": "^1.4.0"
   },
   "peerDependencies": {
     "uuid": "^9.0.0"
   },
+  "dependencies": {
+    "axios": "^0.28.1",
+    "jsonschema": "^1.4.1"
+  },
   "devDependencies": {
-    "@babel/core": "^7.16.0",
-    "@babel/eslint-parser": "^7.16.3",
-    "@babel/preset-env": "^7.15.8",
-    "@vitest/coverage-c8": "^0.29.2",
-    "eslint": "^7.32.0",
-    "eslint-config-standard": "^16.0.3",
-    "eslint-plugin-import": "^2.25.3",
-    "eslint-plugin-jest": "^25.2.4",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^5.1.1",
-    "husky": "^7.0.4",
-    "standard-version": "^9.3.2",
-    "vite": "^4.1.4",
-    "vite-plugin-node-polyfills": "^0.7.0",
-    "vitest": "^0.29.2"
+    "@gitart/eslint-config-ts": "^1.0.0",
+    "@vitest/coverage-c8": "^0.33.0",
+    "@vitest/coverage-v8": "^1.5.0",
+    "eslint": "8.57.0",
+    "husky": "^9.0.11",
+    "standard-version": "^9.5.0",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.9",
+    "vite-plugin-node-polyfills": "^0.21.0",
+    "vitest": "^1.5.0"
   }
 }

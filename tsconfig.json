@@ -1,0 +1,18 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "strict": true,
+    "outDir": "dist",
+    "moduleResolution": "Bundler",
+    "module": "Preserve",
+  },
+  "include": [
+    "src/**/*.ts",
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "legacy",
+    "lib",
+  ]
+}

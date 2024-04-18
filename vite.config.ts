@@ -19,9 +19,9 @@ export default defineConfig({
   },
   build: {
     sourcemap: true,
-    outDir: resolve('lib'),
+    outDir: resolve('dist'),
     lib: {
-      entry: resolve('src/index.js'),
+      entry: resolve('src/index.ts'),
       name: 'index',
       fileName: (format) => {
         let fileEnd = 'js'
@@ -45,7 +45,7 @@ export default defineConfig({
       output: {
         exports: 'named',
         globals: {
-          'uuid': 'uuid',
+          uuid: 'uuid',
         },
       },
     },
@@ -54,6 +54,6 @@ export default defineConfig({
   test: {
     coverage: {
       enabled: true,
-    }
-  }
+    },
+  },
 })
