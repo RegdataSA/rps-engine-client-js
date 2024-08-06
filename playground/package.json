@@ -1,0 +1,48 @@
+{
+  "name": "vue-ts-template",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite --port 8080",
+    "test": "NODE_TLS_REJECT_UNAUTHORIZED='0' vitest .",
+    "build": "run-p type-check build-only",
+    "preview": "vite preview --port 8080",
+    "build-only": "vite build",
+    "type-check": "vue-tsc --noEmit"
+  },
+  "dependencies": {
+    "@unocss/reset": "^0.60.3",
+    "@vueuse/core": "^10.9.0",
+    "gitart-vue-notify": "^1.0.0",
+    "jsoneditor": "^10.0.3",
+    "pinia": "^2.1.7",
+    "rps-engine-client-js": "workspace:*",
+    "vue": "^3.4.27",
+    "vue-router": "^4.3.2",
+    "vuetify": "^3.6.7"
+  },
+  "devDependencies": {
+    "@gitart/eslint-config-vue": "^1.0.0",
+    "@mdi/font": "^7.4.47",
+    "@types/jsoneditor": "^9.9.5",
+    "@types/node": "^20.12.12",
+    "@typescript-eslint/eslint-plugin": "^5.59.0",
+    "@unocss/transformer-directives": "^0.60.3",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "@vitest/browser": "^1.6.0",
+    "@vue/runtime-core": "^3.4.27",
+    "eslint": "8.57.0",
+    "happy-dom": "^14.12.0",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.77.2",
+    "typescript": "~5.4.5",
+    "unocss": "^0.60.3",
+    "unplugin-auto-import": "^0.17.6",
+    "unplugin-vue-components": "^0.27.0",
+    "unplugin-vue-router": "^0.8.8",
+    "vite": "^5.2.11",
+    "vite-plugin-node-polyfills": "^0.22.0",
+    "vite-plugin-vuetify": "^2.0.3",
+    "vue-tsc": "^2.0.19",
+    "webdriverio": "^8.39.0"
+  }
+}

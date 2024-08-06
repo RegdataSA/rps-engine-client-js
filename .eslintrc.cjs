@@ -10,5 +10,6 @@ module.exports = {
   ignorePatterns: [
     '**/lib/*',
     '**/legacy/*',
+    '**/node_modules/*',
   ],
 }

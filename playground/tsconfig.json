@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "moduleResolution": "Bundler",
+    "module": "Preserve",
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "lib": ["ESNext", "DOM"],
+    "skipLibCheck": true,
+    "paths": {
+      "@/*": ["./src/*"],
+    },
+    "types": [
+      "unplugin-vue-router/client"
+    ]
+  },
+  "include": [
+    "src/**/*.ts", "src/**/*.d.ts", "src/**/*.vue",
+    "./typed-router.d.ts"
+  ],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
