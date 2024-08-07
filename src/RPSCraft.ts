@@ -102,9 +102,9 @@ export class RPSCraft {
    */
   build(): ITransformInput {
     return {
+      rightsContexts: this.#buildContextsStructure(this.rightsContextsDictionary),
       processingContexts: this.#buildContextsStructure(this.processingContextsDictionary),
       requests: this.requests,
-      rightsContexts: this.#buildContextsStructure(this.rightsContextsDictionary),
     }
   }
 }
