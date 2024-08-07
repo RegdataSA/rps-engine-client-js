@@ -52,12 +52,14 @@ const instanceSchemaCSharp: Schema = {
       properties: {
         Evidences: { $ref: '/EvidencesCSharp' },
       },
+      additionalProperties: false,
     },
     LoggingContext: {
       type: ['object', 'null'],
       properties: {
         Evidences: { $ref: '/EvidencesCSharp' },
       },
+      additionalProperties: false,
     },
   },
 
@@ -159,6 +161,7 @@ const requestDataSchemaCSharp = {
       properties: {
         Evidences: { $ref: '/EvidencesCSharp' },
       },
+      additionalProperties: false,
     },
   },
   required: ['RightsContexts', 'Requests'],
@@ -226,12 +229,14 @@ const instanceSchema: Schema = {
       properties: {
         evidences: { $ref: '/Evidences' },
       },
+      additionalProperties: false,
     },
     loggingContext: {
       type: ['object', 'null'],
       properties: {
         evidences: { $ref: '/Evidences' },
       },
+      additionalProperties: false,
     },
   },
 
@@ -334,6 +339,7 @@ const requestDataSchema = {
       properties: {
         evidences: { $ref: '/Evidences' },
       },
+      additionalProperties: false,
     },
   },
   required: ['rightsContexts', 'requests'],
