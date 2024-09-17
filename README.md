@@ -5,7 +5,7 @@ Regdata RPS Engine Client library (JS/TS)
 
 TypeScript support | NodeJS/Browser support | Request builder and validator | Easy to use
 
-⭐ [Playground](https://github.com/gitart-group/vue-dialog) | 📚 [Documentation](https://community.rpsprod.ch/library) | 📦 [NPM](https://www.npmjs.com/package/rps-engine-client-js) | [GitHub](https://github.com/RegdataSA/rps-engine-client-js)
+📚 [RPS Documentation](https://community.rpsprod.ch/library) | 📦 [NPM](https://www.npmjs.com/package/rps-engine-client-js) | [GitHub](https://github.com/RegdataSA/rps-engine-client-js)
 
 
 ### 🚨 **Since version 5.0.0 the API has changed significantly. The previous version is available in the [v4 branch](https://www.npmjs.com/package/rps-engine-client-js/v/4.0.0).**
