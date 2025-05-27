@@ -1,6 +1,6 @@
 {
   "name": "rps-engine-client-js",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "description": "RPS Engine client for JavaScript/TypeScript",
   "keywords": [
     "REGDATA",
@@ -11,7 +11,7 @@
   ],
   "license": "Apache-2.0",
   "repository": "RegdataSA/rps-engine-client-js",
-  "author": "RegdataSA Mykhailo Kryvoruchko",
+  "author": "Regdata SA",
   "type": "module",
   "files": [
     "lib",

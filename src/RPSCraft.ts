@@ -21,6 +21,7 @@ export class RPSCraft {
   addRequest(data: {
     rightsContext: IContext
     processingContext?: IContext
+    secretsManager?: string
     instances: IInstance[]
   }): RPSCraft {
     const rightsContextKey = this.#getOrAddContextKey('rights', data.rightsContext)
@@ -36,6 +37,7 @@ export class RPSCraft {
         guid: uuidv4(),
         rightsContext: rightsContextKey,
         processingContext: processingContextKey,
+        secretsManager: data.secretsManager,
         instances,
       })
     }

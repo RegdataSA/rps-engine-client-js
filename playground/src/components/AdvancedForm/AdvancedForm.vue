@@ -11,6 +11,7 @@ const requestData = defineModel<any | null>('request', {
 })
 
 const values = ref<IInstance[]>([])
+const secretsManager = ref<string>()
 const rightsContextEvidences = ref<IEvidence[]>([])
 const processingContextEvidences = ref<IEvidence[]>([])
 
@@ -54,6 +55,7 @@ const onGenerateRequest = () => {
     const rpsCraft = new RPSCraft()
     rpsCraft.addRequest({
       instances: values.value,
+      secretsManager: secretsManager.value,
       rightsContext: {
         evidences: rightsContextEvidences.value,
       },
@@ -154,6 +156,21 @@ const {
             Add value
           </VListItem>
         </VList>
+      </VCard>
+
+      <VCard class="px-6 py-5">
+        <div class="text-lg font-semibold">
+          Secrets manager
+        </div>
+
+        <div class="py-3">
+          <VTextField
+            v-model="secretsManager"
+            label="Secrets manager ID"
+            density="compact"
+            hide-details
+          />
+        </div>
       </VCard>
 
       <div class="grid grid-cols-2">

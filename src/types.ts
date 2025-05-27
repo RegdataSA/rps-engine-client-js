@@ -34,6 +34,7 @@ export interface IRequest {
   guid: string
   rightsContext: string
   processingContext?: string
+  secretsManager?: string
   instances: IInstance[]
 }
 

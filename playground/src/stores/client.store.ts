@@ -4,6 +4,16 @@ import { RPSAgent } from 'rps-engine-client-js/dev'
 
 import { credentialsStore } from './store'
 
+export interface IIdentityCredentials {
+  clientId: string
+  clientSecret: string
+  identityUrl: string
+}
+
+export interface ICredentials extends IIdentityCredentials {
+  engineUrl: string
+}
+
 export const useClientStore = defineStore('client-store', () => {
   const initializeLoading = ref(false)
 
@@ -17,7 +27,7 @@ export const useClientStore = defineStore('client-store', () => {
   const identityUrlPlaceholder = 'https://identity.rpsprod.ch'
   const identityUrl = ref(identityUrlDefault)
 
-  const agentCredentials = ref({
+  const agentCredentials = ref<ICredentials>({
     identityUrl: '',
     clientId: '',
     clientSecret: '',
@@ -52,11 +62,7 @@ export const useClientStore = defineStore('client-store', () => {
   /**
    * Check if the identity client is valid
    */
-  const checkIdentity = async(credentials: {
-    clientId: string
-    clientSecret: string
-    identityUrl: string
-  }) => {
+  const checkIdentity = async(credentials: IIdentityCredentials) => {
     const agent = new RPSAgent({
       identityUrl: credentials.identityUrl,
       identity: {
@@ -68,12 +74,7 @@ export const useClientStore = defineStore('client-store', () => {
     await agent.getToken()
   }
 
-  const setCredentials = async(credentials: {
-    clientId: string
-    clientSecret: string
-    identityUrl: string
-    engineUrl: string
-  }) => {
+  const setCredentials = async(credentials: ICredentials) => {
     try {
       await checkIdentity(credentials)
 
