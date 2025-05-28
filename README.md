@@ -72,6 +72,7 @@ import { RPSCraft } from 'rps-engine-client-js'
 
 const rpsCraft = new RPSCraft()
 rpsCraft.addRequest({
+  secretsManager: 'id', // optional, if you want to use secrets manager
   instances: [
     {
       value: 'Jonny',
